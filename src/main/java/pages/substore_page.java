@@ -15,13 +15,287 @@ import org.openqa.selenium.support.ui.Select;
 
 public class substore_page extends StartupPage {
 
+	
+
 	public substore_page(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+	}	
+
+	public By getUsernameTextfieldLocator() {
+		return By.id(" ");
+	}
+
+	public By getPasswordTextboxLocator() {
+
+		return By.xpath(" ");
+	}
+
+	public By getSignInButtonLocator() {
+		return By.xpath(" ");
+	}
+
+	public By getDropDownLocater() {
+		return By.xpath(" ");
+	}
+
+	public By getRadiologyLocator() {
+		return By.xpath("");
+	}
+
+	public By getDropDownInventoryLocater() {
+		return By.xpath("");
+	}
+
+	public By getAccountsButton() {
+		return By.xpath("");
 	}
 
 	public By getAnchorTagLocatorByText(String anchorTagName) {
-		return By.xpath(" ");
+		return By.xpath("");
+	}
+
+	public By getPageBarFixedLocator(String navBarName) {
+		if (navBarName.equalsIgnoreCase(" ")) {
+			navBarName = " ";
+		} else if (navBarName.equalsIgnoreCase(" ")) {
+			navBarName = " ";
+		} else if (navBarName.equalsIgnoreCase(" ")) {
+			navBarName = " ";
+		} else if (navBarName.equalsIgnoreCase(" ")) {
+		}
+		return By.xpath("");
+	}
+
+	public By getSubstoreBoxOptionLocatorByText(String optionToSelect) throws Exception {
+		return By.xpath("");
+	}
+
+	public By getSubstoreBoxLocator() {
+		return By.xpath("");
+	}
+
+	public By getSubstoreSubmodulesLocator() {
+		return By.xpath("");
+	}
+
+	public By getCounters() {
+		return By.xpath("");
+	}
+
+	public By getCreateRequisitionButton() {
+		return By.xpath("");
+	}
+
+	public By searchBarId() {
+		return By.id("");
+	}
+
+	public By getStarIconLocator() {
+		return By.xpath("");
+	}
+
+	public By getRadioButtonLocator(String radioButtonName) {
+		return By.xpath("");
+	}
+
+	public By getTargetInventory() {
+		return By.xpath("");
+	}
+
+	public By getItemName() {
+		return By.xpath("");
+	}
+
+	public By getRequiredQuantity() {
+		return By.xpath("");
+	}
+
+	public By getRequestButton() {
+		return By.cssSelector("");
+	}
+
+	public By favouriteOrStarIcon() {
+		return By.xpath("");
+	}
+
+	public By getCloseRequest() {
+		return By.xpath("");
+	}
+
+	public By getCloseModalLocator() {
+		return By.cssSelector("");
+	}
+
+	public By getDateRangeButton() {
+		return By.xpath("");
+	}
+
+	public By getOneWeekButton() {
+		return By.xpath("");
+	}
+
+	public By getViewButton() {
+		return By.xpath("");
+	}
+
+	public By getCloseViewItem() {
+		return By.xpath("");
+	}
+
+	public By getInternalCloseviewItem() {
+		return By.xpath("");
+	}
+
+	public By getDirectDispatchButton() {
+		return By.xpath("");
+	}
+
+	public By getBackToReqListButton() {
+		return By.xpath("");
+	}
+
+	public By getRequestedToColumn() {
+		return By.cssSelector("");
+	}
+
+	public By getStatusColumnLocator() {
+		return By.cssSelector("");
+	}
+
+	public By getStoreName() {
+		return By.cssSelector("");
+	}
+
+	public By getInternalItemNameButton() {
+		return By.cssSelector("");
+	}
+
+	public By getDispatchedQuantityButton() {
+		return By.xpath("");
+	}
+
+	public By getRemarksButton() {
+		return By.xpath("");
+	}
+
+	public By getInternalDirectDispatchButton() {
+		return By.cssSelector("");
+	}
+
+	public By getRecieveItemsButton() {
+		return By.xpath("");
+	}
+
+	public By getRecieveButton() {
+		return By.xpath("");
+	}
+
+	public By getNewConsumptionButton() {
+		return By.xpath("");
+	}
+
+	public By getConsumptionDate() {
+		return By.xpath("");
+	}
+
+	public By getSubModuleLocator() {
+		return By.xpath("");
+	}
+
+	public By calendarFromDropdown() {
+		return By.xpath("");
+	}
+
+	public By calendarToDropdown() {
+		return By.xpath("");
+	}
+
+	public By getAllRequisitionDate() {
+		return By.xpath("");
+	}
+
+	public By getGeneralInventory() {
+		return By.cssSelector("");
+	}
+
+	public By getDotDropDownButton() {
+		return By.xpath("");
+	}
+
+	public By getCounterReportModuleButton() {
+		return By.xpath("");
+	}
+
+	public By getShowReportButton() {
+		return By.xpath("");
+	}
+
+	public By getReturnItemsButton() {
+		return By.xpath("");
+	}
+
+	public By getSelectInventoryButton() {
+		return By.xpath("");
+	}
+
+	public By getGeneralInventoryButton() {
+		return By.xpath("");
+	}
+
+	public By getReturnQtyButton() {
+		return By.cssSelector("");
+	}
+
+	public By getReturnButton() {
+		return By.xpath("");
+	}
+
+	public By getCounterButtonFourth() {
+		return By.xpath("");
+	}
+
+	public By getButtonLocatorsBytext(String buttonName) {
+		return By.xpath("");
+	}
+
+	public By getPopUpMessageText(String msgStatus, String messageText) {
+		return By.xpath("");
+	}
+
+	public By popupCloseButton() {
+		return By.cssSelector("");
+	}
+
+	public By printModalLocator() {
+		return By.cssSelector("");
+	}
+
+	public By getEllipsisButtonByStatus(String status) {
+		return By.xpath("");
+	}
+
+	public By getReceiveButtonByStatus(String status) {
+		return By.xpath("");
+	}
+
+	public By getStockAvailableQuantity(String categoryName) {
+		return By.xpath("");
+	}
+
+	public By getSaveButtonLocator() {
+		return By.cssSelector("");
+	}
+
+	public By getReportsTableLocator() {
+		return By.cssSelector("");
+	}
+
+	public By getModuleSignoutLocator() {
+		return By.xpath("");
+	}
+
+	public By getHoverText() {
+		return By.xpath("");
 	}
 
 	/**
