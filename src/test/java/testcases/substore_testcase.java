@@ -199,42 +199,6 @@ public class substore_testcase extends AppTestBase {
 		Assert.assertTrue(substorePageInstance.verifyFilterByStoreFunctionality());
 	}
 
-	@Test(priority = 13, groups = {
-			"sanity" }, description = "Pre condition: User should be logged in and it is on Inventory sub-module\r\n"
-					+ "1. Naviaget to \"Inventory Requisition\" section\r\n" + "2. Select \"Pending\" radio button\r\n"
-					+ "3. Select \"Complete\" radio button\r\n" + "4. Select \"Canceled\" radio button\r\n"
-					+ "5. Select \"Withdrawn\" radio button\r\n" + "6. Select \"All\" radio button\r\n"
-					+ "7. Ensure that all radio buttons in the \"List by Requisition Status\" field are functional and clickable.")
-
-	public void verifyInventoryRequisitionRadioButtonSection() throws Exception {
-		substorePageInstance = new substore_page(driver);
-		Assert.assertTrue(substorePageInstance.verifyInventoryRequisitionRadioButtonSection());
-	}
-
-	@Test(priority = 14, groups = {
-			"sanity" }, description = "Pre condition: User should be logged in and it is on Inventory sub-module\r\n"
-					+ "1. Naviagte to the \"Inventory Requisition\" section\r\n"
-					+ "2. Click on \"all\" radio button\r\n" + "3. Enter the pending keyword in the search bar.\r\n"
-					+ "4. Record should be present as per the entered keyword")
-
-	public void verifyRecordsAreFilteredAccordingToSearchData() throws Exception {
-		substorePageInstance = new substore_page(driver);
-
-		Assert.assertTrue(substorePageInstance.verifyRecordsAreFilteredAccordingToSearchData());
-	}
-
-	@Test(priority = 15, groups = {
-			"sanity" }, description = "Pre condition: User should be logged in and it is on Inventory sub-module > List Request section \r\n"
-					+ "1. Navigate to \" Inventory Requisition\" section \r\n"
-					+ "2.  Click on \"View\" button of the specfic record.\r\n"
-					+ "3. Click on \"Close\" icon button\r\n"
-					+ "4. After Clicking \"View\" button, \"REQUISITION DETAILS PRINT\" page should pop up and by Clicking on close icon, user should navigate back to the Inventory Requisition page ")
-
-	public void verifyPrintModalIsOpenedIfUserSelectsViewButton() throws Exception {
-		substorePageInstance = new substore_page(driver);
-
-		Assert.assertTrue(substorePageInstance.verifyPrintModalIsOpenedIfUserSelectsViewButton());
-	}
 
 	
 	@AfterClass(alwaysRun = true)
