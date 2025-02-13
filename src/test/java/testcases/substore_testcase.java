@@ -142,7 +142,64 @@ public class substore_testcase extends AppTestBase {
 
 		Assert.assertTrue(substorePageInstance.verifyIfInventoryReqInputFieldsDropdownsAndCheckboxesAreVisibleOrNot());
 	}
-	
+
+	@Test(priority = 9, groups = {
+			"sanity" }, description = "Pre condition: User should be logged in and it is on Inventory sub-module\r\n"
+					+ "1. Click on \"Inventory Requisition\" section\r\n"
+					+ "2. Click on \"Create Requisition\" button\r\n"
+					+ "3. Click on \"Target Inventory \" field and Select \"GENERAL-INVENTORY\" option\r\n"
+					+ "4. Click on \"Item Category\" drop down and select \" Consumables\"  option\r\n"
+					+ "5. Enter \"tissue\" in ItemName field\r\n" + "6. Enter the \"Required Quantity\" field \r\n"
+					+ "7. Click on \"Request\" button\r\n" + "8. Click on \"Close\" icon\r\n"
+					+ "9. Verify popup message Requisition is Generated and Saved")
+
+	public void verifyCreateRequisitionButton() throws Exception {
+		substorePageInstance = new substore_page(driver);
+		Map<String, String> substoreExpectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "substore");
+
+		Assert.assertEquals(substorePageInstance.verifyCreateRequisitionButton(),
+				substoreExpectedData.get("requisitionGenerationMsg"));
+	}
+
+	@Test(priority = 10, groups = {
+			"sanity" }, description = "Pre condition: User should be logged in and it is on Inventory Sub-module\r\n"
+					+ "1. Navigate to \"Inventory Requisition\" section\r\n"
+					+ "2. Click on the \"From\" date and select the \"Jan 2022\" date\r\n"
+					+ "3. Click on the \"To\" date and Select \"Current date\" \r\n" + "4. Click on \"OK\" button\r\n"
+					+ "5. The 'Date' column date must fall within the selected date ")
+	public void verifyDateRangeFilterFunctionality() throws Exception {
+		substorePageInstance = new substore_page(driver);
+		userActionsInstance = new UserActions(driver);
+
+		LocalDate currentDate = LocalDate.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		String toDate = currentDate.format(formatter);
+
+		userActionsInstance.click(substorePageInstance.getAnchorTagLocatorByText("Inventory Requisition"));
+		substorePageInstance.applyDateFilter("01-01-2022", toDate);
+		Thread.sleep(3000);
+		substorePageInstance.verifyRequisitionDatesAsPerTheDateRange("01-01-2022", toDate);
+	}
+
+	@Test(priority = 11, groups = {
+			"sanity" }, description = "Pre condition: User should be logged in and it is on Inventory sub-module > List Request section \r\n"
+					+ "1. Click on the data range button. \r\n" + "2. select \"one week\" option from the drop down.")
+
+	public void VerifyDateRangeButton() throws Exception {
+		substorePageInstance = new substore_page(driver);
+
+		Assert.assertTrue(substorePageInstance.VerifyDateRangeButton());
+	}
+
+	@Test(priority = 12, groups = {
+			"sanity" }, description = "Pre condition: User should be logged in and it is on Inventory sub-module\r\n"
+					+ "1. Navigate to \"Inventory Requisition\" section\r\n" + "2. Select option ar per the choice")
+	public void verifyFilterByStoreFunctionality() throws Exception {
+		substorePageInstance = new substore_page(driver);
+		Assert.assertTrue(substorePageInstance.verifyFilterByStoreFunctionality());
+	}
+
+
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 		System.out.println("before closing the browser");
